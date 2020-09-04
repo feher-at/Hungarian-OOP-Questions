@@ -89,6 +89,9 @@
                     - Amennyiben egy továbbfejlesztett osztályban egy, az ősétől örökölt metódust felülírunk, átalakítunk, a változatlan formában örökölt metódusok képesek
                     legyenek ezen új verziót automatikusan használni.
                     Ezt jellemzően a virtuális metódusok segítségével szokták támogatni a programozási nyelvek.
+                    2 féle polimorfizmus van: 
+                    1. statikus (Early binding), mely compile timeban történik, pl overloading
+                    2. dinamikus (Late binding), mely runtimeban történik, pl overriding
                 </div>
                 
             </li>
@@ -149,7 +152,9 @@
                     -Mi az az overload-
                 </div>          
                 <div class="answer">
-                    - Egy függvénynek több implementációja is lehetséges különböző paraméterlistával. <br>
+                    - Olyan statikus többalakúság, ahol a metódus azonos névvel, de different paraméterrel rendelkezik.
+                    - Early binding, complie timeban.
+                    -Tehát Egy függvénynek több implementációja is lehetséges különböző paraméterlistával. <br>
 	                - Több azonos nevű, különböző szignatúrájú függvény. <br>
 	                - A függvényhívás aktuális paraméterei meghatározzák, hogy melyik függvény fog meghívódni.
                 </div>
@@ -222,7 +227,8 @@
                     -Mire való az override-
                 </div>          
                 <div class="answer">
-                    
+                - Olyan dinamikus többalakúság, amelynél egy metódust felülírunk, viselkedését megváltoztatva.
+                -Dinamikus (Late binding) runtimeban történik.
                 - Egy osztályhierarchián belül az utódosztály újradefiniálja az ősosztály metódusát ha az overrideot tesz lehetővé (C# Virtual).
                 </div>
                 
@@ -258,6 +264,7 @@
                     -Mi a különbség az overload és az override között-
                 </div>          
                 <div class="answer">
+                    -overload statikus Early binding complie time, overriding dinamikus late binding runtime
                     - Amíg a túlterheléssel ugyan azon metódus különböző implementációit érjük el paraméter lista alapján az felülírással megváltoztatjuk az adott függvény 		
                     tulajdonságait.
                 </div>
@@ -498,7 +505,7 @@
             <li>
         
                 <div class="question">
-                    Mi az alapértelmezett láthatósági módosító az osztályoknál?
+                    Mi az alapértelmezett láthatósági módosító az osztályokon belül?
                 </div>          
                 <div class="answer">
                     -privát
