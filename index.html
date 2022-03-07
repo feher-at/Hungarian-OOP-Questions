@@ -142,6 +142,8 @@
                 <div class="answer">
                     - Polimorfikus viselkedést megvalósító függvény. <br>
 	                - A virtual kulcsszó segítségével kell bekapcsolni egy adott művelet többalakúságát.
+			- A virtuális függvénnyel újra tudjuk definiálni a függvényt hogy ha a virtualis függvényt deklaráló osztályból öröklődünk
+			  ezzel megvalósítva a late bindingot
                 </div>
                 
             </li>
@@ -167,7 +169,7 @@
                     Mit jelent az absztrakt osztály?
                 </div>          
                 <div class="answer">
-                    -  Olyan speciális osztály melyet nem példányosíthatunk és rendelkezhet absztrakt adattagokkal vagy függvényekkel melyek működését implementáció során nem 		szükséges ismernünk és létrehozhatjuk őket torzs nélküli metódusként, amit majd leszármazott osztályai valósítanak meg. 
+                    -  Olyan speciális osztály melyet nem példányosíthatunk és rendelkezhet absztrakt adattagokkal vagy függvényekkel melyek működését implementáció során nem 		szükséges ismernünk és létrehozhatjuk őket torzs nélküli metódusként, amit majd leszármazott osztályai valósítanak meg. Egy absztrakt osztálynak tartalmazhat olyan függvényt is aminek van függvény teste 
                 </div>
                 
             </li>
@@ -204,7 +206,7 @@
                 </div>          
                 <div class="answer">
                     - Referencia: object <br>
-	                - Érték: int, float, double, string
+	                - Érték: int, float, double, string, struct
                 </div>
                 
             </li>
@@ -230,6 +232,7 @@
                 - Olyan dinamikus többalakúság, amelynél egy metódust felülírunk, viselkedését megváltoztatva.
                 -Dinamikus (Late binding) runtimeban történik.
                 - Egy osztályhierarchián belül az utódosztály újradefiniálja az ősosztály metódusát ha az overrideot tesz lehetővé (C# Virtual).
+		- Az overrideot csak olyan methódusoknál tudjuk alkalmazni ami a virtual függvényként lett definiálva
                 </div>
                 
             </li>
@@ -277,7 +280,8 @@
                     -Mi az absztraktció-
                 </div>          
                 <div class="answer">           
-	                - Elvonatkoztatás. Segítségével privát implementációkat rejthetünk el egy nyilvános interfész mögé.
+	                - Elvonatkoztatás. Segítségével privát implementációkat rejthetünk el egy nyilvános interfész mögé. Az absztrakcióval elrejtjük a végfelhasználó elöl azokat
+			  az adatokat amit nem akarunk neki megmutatni.
                 </div>
                 
             </li>
@@ -315,6 +319,7 @@
                 </div>          
                 <div class="answer">
                     - A leszármazott osztályban a „base” jelzővel hivatkozhatunk a metódusta.
+		    - Hogy ha az az osztály egy static class
                 </div>
                 
             </li>
@@ -381,6 +386,10 @@
                 <div class="answer">
                     - A struct lényegében egy lebutított osztály. Minden public benne. A stacken tárolódik és érték típusú. <br>
 	                - Az osztály referencia típusú és a heap-ben jön létre.
+			- A structból nem tudunk örökölni és nem is örökölhet semmiből
+			- A structnak nem lehet se constructora vagy destructora
+			- A structnak nem lehet abstract vagy sealed modifikátora
+			- A structot példányosíthatjuk a new operátor nélkül
                 </div>
                 
             </li>
@@ -530,8 +539,8 @@
                     -Különbség a shallow és a deep copy között-
                 </div>          
                 <div class="answer">
-                    - Shallow: Lemásolja az adott objektumot. Referencia lesz. <br>
-	                - Deep: Lemásolja az objektum értékét. Két különböző, de azonos értékű objektum lesz így.
+                    - Shallow: Lemásolja az adott objektumot de csak az értékeit, a referenciája viszont ugyan az lesz. <br>
+	                - Deep: Lemásolja az objektum értékét. Két különböző referenciára mutató, de azonos értékű objektum lesz így.
                 </div>
                 
             </li>
@@ -584,6 +593,8 @@
                 <div class="answer">            
 	                - Ha egy változó egy másiknak a referenciája akkor ha az egyik értéke megváltozik mindkettő megváltozik <br>
 	                - Érték típusnál ugyanekkor csak felveszi a másik változó értékét és változtatás után csak az egyik változik meg.
+			- A referencia a Heap-en tárolódik
+			- Az érték típus a stacken tárolódik
                 </div>
                 
             </li>
@@ -776,6 +787,7 @@
                 <div class="answer">
                     - Az interfész metódusainak nem lehet törzse. <br>
                     - Egy osztály kiterjeszthet több interfészt is míg örökölni csak egyszer tud és csak egy osztálytól.
+		    - egy interface minden tagja publicnak kell legyen
                 </div>
                 
             </li>
